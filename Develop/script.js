@@ -1,11 +1,25 @@
-console.log("Hello " + dayjs());
-
-//shows current day and current hour at the top of the calendar
+//
 $('#currentDay').text(dayjs().format('dddd, MMMM DD'));
 $('#currentHour').text("Current hour: " + dayjs().format('hh:mm a'));
 
 
+//
+$(function () {
+  var currentTime = dayjs().format('HH');
+  var saveBtn = $(".saveBtn")
 
+
+  //
+  saveBtn.on("click", function () {
+    var blockTime = $(this).parent().attr("id");
+    var savedText = $(this).siblings("textarea").val();
+    localStorage.setItem(blockTime, savedText)
+  })
+
+
+
+
+});
 
 
 
