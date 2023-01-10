@@ -1,5 +1,9 @@
 console.log("Hello " + dayjs());
 
+//shows current day and current hour at the top of the calendar
+$('#currentDay').text(dayjs().format('dddd, MMMM DD'));
+$('#currentHour').text("Current hour: " + dayjs().format('hh:mm a'));
+
 
 
 
