@@ -1,15 +1,14 @@
-//
-$('#currentDay').text(dayjs().format('dddd, MMMM DD'));
+//Displays current day and hour at the top of the calendar
+$('#currentDay').text(dayjs().format('dddd, MMMM DD YYYY'));
 $('#currentHour').text("Current hour: " + dayjs().format('hh:mm a'));
 
 
-//
+
 $(function () {
-  var currentTime = dayjs().format('HH');
-  var saveBtn = $(".saveBtn")
+  var currentTime = dayjs().format('HH'); //saves the current hour of the day inside a variable
+  var saveBtn = $(".saveBtn") //select all elements on the page with the class "saveBtn" and assigns them to a variable called "saveBtn".
 
-
-  //
+  //By clicking on the save button this event will assign blocktime value into the key in local storage and will save users text input into the key value.
   saveBtn.on("click", function () {
     var blockTime = $(this).parent().attr("id");
     var savedText = $(this).siblings("textarea").val();
@@ -17,7 +16,7 @@ $(function () {
   })
 
 
-  //
+  //this function will loop every .time-block and will check if the currentTime matches or not with the blockTime values. It will add class values (past, present, future) and will change its style property accordingly.
   $(".time-block").each(function () {
     var blockTime = $(this).attr("id");
 
@@ -40,7 +39,8 @@ $(function () {
     }
 
 
-    //
+    //Get item from local storage if any
+    //Example: selects the element with the ID "10" and within that element, it selects all elements with the class "description". Then it sets the value of those selected elements to the value stored in local storage with the key "10".
     $("#10 .description").val(localStorage.getItem("10"));
     $("#11 .description").val(localStorage.getItem("11"));
     $("#12 .description").val(localStorage.getItem("12"));
