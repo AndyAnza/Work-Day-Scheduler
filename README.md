@@ -8,7 +8,7 @@ This is just simple calendar application that allows a user to save events for e
 
 ## Screenshot
 
-![alt text](https://github.com/AndyAnza/Work-Day-Scheduler/blob/e0759c6d2d091a6aebfb76ef3ade17771b1535c3/Assets/images/127.0.0.1_5500_index.html%20(7).png)
+![alt text](https://github.com/AndyAnza/Work-Day-Scheduler/blob/bcee4e41b20e10b5d637bf37ea083338159aaa23/Assets/images/andyanza.github.io_Work-Day-Scheduler_.png)
 
 ## User Story
 
